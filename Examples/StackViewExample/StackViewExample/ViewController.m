@@ -24,6 +24,7 @@
     [super viewDidLoad];
     
     //inset content from edge
+    self.stackView.collapseHiddenViews = YES;
     self.stackView.contentInset = UIEdgeInsetsMake(10, 10, 10, 10);
     
     //set spacing between items
@@ -33,6 +34,18 @@
 - (IBAction)sliderAction:(UISlider *)sender
 {
     self.stackView.contentSpacing = sender.value;
+}
+
+
+- (IBAction)buttonAction:(id)sender { //collapse/show image 
+    UIImageView * testImage = self.crazyImage;
+    #pragma unused(sender)
+    if (testImage.alpha < 0.1) {
+        testImage.alpha =1;
+    } else {
+        testImage.alpha=0;
+    }
+    [self.stackView setNeedsLayout];
 }
 
 @end

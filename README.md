@@ -7,6 +7,8 @@ To use StackView, simply add subviews to it, and it will automatically resize an
 
 StackView automatically handles view resizing (e.g. in the case of a screen rotation).
 
+Minor modification done to allow collapsing hidden views.
+
 
 Supported OS & SDK Versions
 -----------------------------

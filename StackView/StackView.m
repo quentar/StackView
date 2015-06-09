@@ -97,6 +97,11 @@
                 _size.width = size.width;
             }
             if (update) view.frame = CGRectMake(0, result.height, _size.width, _size.height);
+            if ( (self.collapseHiddenViews == YES) &&
+                ((view.alpha <= 0)|| (view.hidden == YES) )
+                 ) {    //'collapse' invisible view
+                _size = CGSizeMake(0, 0);
+            }
             result.height += _size.height + _contentSpacing;
             result.width = MAX(result.width, _size.width);
         }

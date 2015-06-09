@@ -42,6 +42,7 @@
 
 @property (nonatomic, assign) CGFloat contentSpacing;
 @property (nonatomic, assign) CGFloat maxHeight;
+@property (assign,atomic) int collapseHiddenViews;
 
 @end
 
